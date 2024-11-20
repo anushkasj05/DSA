@@ -1,0 +1,9 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/anushkasudarshanjoshi/Documents/CYBROM/CPP/DS/15 Nov/output/concepts'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z4maxsii, symObjAddr: 0x0, symBinAddr: 0x100003EB4, symSize: 0x48 }
+  - { offsetInCU: 0x2DCB, offset: 0x2DCB, size: 0x8, addend: 0x0, symName: __Z4maxsii, symObjAddr: 0x0, symBinAddr: 0x100003EB4, symSize: 0x48 }
+  - { offsetInCU: 0x2E05, offset: 0x2E05, size: 0x8, addend: 0x0, symName: __Z4maxsdd, symObjAddr: 0x48, symBinAddr: 0x100003EFC, symSize: 0x58 }
+  - { offsetInCU: 0x2E3F, offset: 0x2E3F, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xA0, symBinAddr: 0x100003F54, symSize: 0x30 }
+...

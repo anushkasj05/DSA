@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/anushkasudarshanjoshi/Documents/CYBROM/CPP/DS/16 Oct",
+      "program": "/Users/anushkasudarshanjoshi/Documents/CYBROM/CPP/DS/16 Oct/build/Debug/outDebug"
+    }
+  ]
+}
