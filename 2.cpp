@@ -1,25 +1,27 @@
-#include<iostream>
-#include<tuple>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
-#include<vector>
-int main(){
-    vector<tuple<int,string,int>>v1;
-    int n,rno,age;
-    string name;
-    cout<<"Enter the number of records: ";
-    cin>>n;
-    for(int i=1;i<=n;i++){
-        cout<<"Enter the roll number: ";
-        cin>>rno;
-        cout<<"Enter the name: ";
-        cin>>name;
-        cout<<"Enter the age: ";
-        cin>>age;
-        v1.push_back(make_tuple(rno,name,age));
+
+bool hasPairWithSum(vector<int> arr, int x) {
+    sort(arr.begin(), arr.end());
+    int left = 0, right = arr.size() - 1;
+
+    while (left < right) {
+        int sum = arr[left] + arr[right];
+        if (sum == x) return true;
+        if (sum < x) left++;
+        else right--;
     }
-    for(int i=0;i<v1.size();i++){
-        cout<<"Roll Number: "<<get<0>(v1[i])<<endl;
-        cout<<"Name: "<<get<1>(v1[i])<<endl;
-        cout<<"Age: "<<get<2>(v1[i])<<endl;
-    }
+    return false;
+}
+
+int main() {
+    vector<int> arr1 = {0, -1, 2, -3, 1};
+    cout << (hasPairWithSum(arr1, -2) ? "Yes" : "No") << endl;
+
+    vector<int> arr2 = {1, -2, 1, 0, 5};
+    cout << (hasPairWithSum(arr2, 0) ? "Yes" : "No") << endl;
+
+    return 0;
 }
