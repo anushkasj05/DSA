@@ -1,23 +1,28 @@
-#include <iostream>
-#include <vector>
+#include<iostream>
 using namespace std;
-
-vector<int> findDuplicates(vector<int>& arr) {
-    vector<int> duplicates;
-    int n = arr.size();
-    
-    for (int i = 0; i < n; i++) {
-        int index = abs(arr[i]) % n;
-        if (arr[index] < 0) duplicates.push_back(index);
-        else arr[index] = -arr[index];
+#include<stack>
+int main(){
+    stack<int> s;
+    s.push(5);
+    s.push(12);
+    s.push(10);
+    // s.pop();
+    // s.pop();
+    // s.pop();
+    if(s.empty()){
+        cout<<"Stack is empty"<<endl;
     }
-    
-    return duplicates;
-}
-
-int main() {
-    vector<int> array = {1, 2, 3, 6, 3, 6, 1};
-    vector<int> result = findDuplicates(array);
-    for (int num : result) cout << num << " ";
-    return 0;
+    else{
+        cout<<"Stack is not empty"<<endl;
+    }
+    while(!s.empty()){
+        cout<<s.top()<<endl;
+        s.pop();
+    }
+    if(s.empty()){
+        cout<<"Stack is empty"<<endl;
+    }    
+    else{
+        cout<<"Stack is not empty"<<endl;
+    }
 }
