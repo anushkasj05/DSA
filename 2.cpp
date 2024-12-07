@@ -1,27 +1,21 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+// display reverse of string using stack
+#include<iostream>
+#include<stack>
 using namespace std;
-
-bool hasPairWithSum(vector<int> arr, int x) {
-    sort(arr.begin(), arr.end());
-    int left = 0, right = arr.size() - 1;
-
-    while (left < right) {
-        int sum = arr[left] + arr[right];
-        if (sum == x) return true;
-        if (sum < x) left++;
-        else right--;
+void reverse(string s){
+    stack<char> st;
+    for(int i=0;i<s.length();i++){
+        st.push(s[i]);
     }
-    return false;
+    while(!st.empty()){
+        cout<<st.top();
+        st.pop();
+    }
 }
-
-int main() {
-    vector<int> arr1 = {0, -1, 2, -3, 1};
-    cout << (hasPairWithSum(arr1, -2) ? "Yes" : "No") << endl;
-
-    vector<int> arr2 = {1, -2, 1, 0, 5};
-    cout << (hasPairWithSum(arr2, 0) ? "Yes" : "No") << endl;
-
+int main(){
+    string s;
+    cout<<"Enter a string: ";
+    getline(cin,s);
+    reverse(s);
     return 0;
 }
